@@ -1,8 +1,11 @@
 package Labirinto;
+import Personagens.*;
 
-public class Saida implements Labirinto {
-	public String identificacao() {
-		String string = new String();
-		return string;
-	};
+public class Saida implements Component{
+
+
+	public void andar(Personagem p){ 
+	    System.out.println("Saida encontrada personagem escapou.");
+	   }
+
 }

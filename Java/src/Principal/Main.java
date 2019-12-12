@@ -19,7 +19,7 @@ import PoderesAtaque.PoderForte;
 import PoderesAtaque.PoderFraco;
 import PoderesAtaque.PoderMedio;
 import TiposAtaque.Ataque;
-import TiposAtaque.AtkMedio;
+import TiposAtaque.Medio;
 import TiposAtaque.Forte;
 import TiposAtaque.Fraco;
 
