@@ -28,9 +28,9 @@ private static AdvancedFactoryPersonagem instancia = null;
 		else if (random<=0.6)
 			p.setAtaque(new PoderFraco(new Forte()));
 		else if (random<=0.8)
-			p.setAtaque(new PoderForte(new Fraco()));
+			p.setAtaque(new PoderForte(new AtkMedio()));
 		else if (random<=1.0)
-			p.setAtaque(new PoderMedio(new Fraco()));
+			p.setAtaque(new PoderMedio(new AtkMedio()));
 		
 		return p;
 	}

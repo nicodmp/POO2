@@ -1,5 +1,4 @@
 package Personagens;
-import TiposMagia.*;
 
 import java.util.ArrayList;
 
@@ -10,6 +9,7 @@ import Observer.Sujeito;
 import TiposAtaque.Ataque;
 import TiposCorrida.Movimento;
 import TiposPulo.Pulo;
+import TiposMagia.Magia;
 
 public class Personagem implements Sujeito{
 	private Ataque a;
@@ -72,7 +72,7 @@ public class Personagem implements Sujeito{
 		return m;
 	}
 
-	public void setM(Magia m) {
+	public void setMagia(Magia m) {
 		this.m = m;
 	}
 

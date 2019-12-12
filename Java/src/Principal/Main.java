@@ -7,26 +7,30 @@
 
 package Principal;
 
-import Escudo.Escudo;
-import Escudo.Escudo10;
-import Escudo.Escudo100;
-import Escudo.Escudo25;
-import Escudo.Escudo50;
-import Observer.Inimigos;
-import Personagens.Personagem;
-import Personagens.Personagem01;
-import PoderesAtaque.PoderForte;
-import PoderesAtaque.PoderFraco;
-import PoderesAtaque.PoderMedio;
-import TiposAtaque.Ataque;
-import TiposAtaque.Medio;
-import TiposAtaque.Forte;
-import TiposAtaque.Fraco;
+import Escudo.*;
+import Observer.*;
+import Personagens.*;
+import PoderesAtaque.*;
+import TiposAtaque.*;
+import Labirinto.*;
 
 public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
+		
+		Component labirinto = new Sala(new Abismo(), new Sala(new Sala(new Abismo(), new Sala(new Abismo(), new Saida(),"Sala3"),"Sala4"), new Saida(),"Sala2"),"Sala1");
+		Personagem p1 = new Personagem();
+		Personagem p2 = new Personagem();
+		Personagem p3 = new Personagem();
+		
+		Thread t1 = new Thread(new Game(labirinto, p1));
+		Thread t2 = new Thread(new Game(labirinto, p2));
+		Thread t3 = new Thread(new Game(labirinto, p3));
 
+		t1.start();
+		t2.start();
+		t3.start();
+		
 		
 		/* TESTE PADRAO DECORATOR 
 		 * 
@@ -35,7 +39,7 @@ public class Main {
 		 * 
 		 * 
 		 * */
-				
+		/*		
 				Personagem p1 = new Personagem01();
 				Ataque a1 = new Forte();
 				p1.setAtaque(a1);
@@ -49,7 +53,7 @@ public class Main {
 				p1.setAtaque(a1);
 				System.out.println("Poder recebido.");
 				System.out.println("Ataque do personagem: " + p1.getAtaque().getDano());
-				
+		*/		
 				
 				
 /* 

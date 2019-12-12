@@ -1,8 +1,9 @@
 package Personagens;
 
-import TiposAtaque.Forte;
-import TiposCorrida.MovMedio;
-import TiposPulo.Medio;
+import TiposAtaque.*;
+import TiposCorrida.*;
+import TiposPulo.*;
+import TiposMagia.*;
 
 
 public class Personagem01 extends Personagem {
@@ -11,5 +12,6 @@ public class Personagem01 extends Personagem {
 		setAtaque(new Forte());
 		setMovimento(new MovMedio());
 		setPulo(new Medio());
+		setMagia(new Fogo());
 	}
 }

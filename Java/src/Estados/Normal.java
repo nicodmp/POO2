@@ -1,13 +1,13 @@
 package Estados;
 
 import Personagens.Personagem;
-import TiposAtaque.Medio;
+import TiposAtaque.AtkMedio;
 import TiposCorrida.MovMedio;
 
 public class Normal extends Estado {
 	public Normal(Personagem personagem) {
 		super(personagem);
-		super.getPersonagem().setAtaque(new Medio());
+		super.getPersonagem().setAtaque(new AtkMedio());
 		super.getPersonagem().setMovimento(new MovMedio());
 	}
 

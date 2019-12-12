@@ -5,12 +5,12 @@ import TiposCorrida.*;
 import TiposPulo.*;
 import TiposMagia.*;
 
-public class Personagem03 extends Personagem {
+public class Personagem04 extends Personagem {
 
-	public Personagem03(){
+	public Personagem04(){
 		setAtaque(new Forte());
 		setMovimento(new Rapido());
 		setPulo(new Baixo());
-		setMagia(new Raio());
+		setMagia(new Gelo());
 	}
 }
