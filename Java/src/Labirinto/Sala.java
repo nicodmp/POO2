@@ -1,5 +1,8 @@
 package Labirinto;
 import Personagens.*;
+
+import java.util.*;
+
 import Observer.*;
 
 public class Sala implements Component {
@@ -7,8 +10,22 @@ public class Sala implements Component {
     private Component caminho2;
     private String nome;
     private Inimigos inimigo;
+    private List<Component> caminhos = null;
+    
+    public void addCaminho (Component c) {
+    	caminhos.add(c);
+    }
+    
+    public void removeCaminho (Component c) {
+    	caminhos.remove(c);
+    }
+    
+    public Sala() {
+    	
+    }
     
     public Sala(Component c1, Component c2, String nome, Inimigos inimigo){
+    	this.caminhos = new ArrayList<>();
         this.caminho1 = c1;
         this.caminho2 = c2;
         this.nome = nome;

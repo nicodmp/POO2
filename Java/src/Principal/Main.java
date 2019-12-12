@@ -6,7 +6,17 @@
  */
 
 package Principal;
-
+import javax.swing.*;
+import java.awt.BasicStroke;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.RenderingHints;
 import Escudo.*;
 import Observer.*;
 import Personagens.*;
@@ -18,7 +28,37 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		Component labirinto = new Sala(new Abismo(), new Sala(new Sala(new Abismo(), new Sala(new Abismo(), new Saida(),"Sala3"),"Sala4"), new Saida(),"Sala2"),"Sala1");
+		int x = 1024;
+        int y = 768;
+        
+        JFrame frame = new JFrame("Labirinto");
+        Game game = new Game();
+        
+        ImageIcon background = new ImageIcon("images/bg.jpg");
+        
+        JLabel label = new JLabel(background);
+        
+        label.setBounds(0, 0, x, y);
+        label.setIcon(background);
+        
+        game.setLayout(null);
+        game.add(label);
+        
+        frame.add(game);
+        frame.setSize(x, y);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+       /* while (true) {          
+            game.repaint();
+            Thread.sleep(50);
+        }*/
+        
+		/*Inimigos i1 = new Inimigos(0,0,10);
+		Inimigos i2 = new Inimigos(0,0,20);
+		Inimigos i3 = new Inimigos(0,0,30);
+		Inimigos i4 = new Inimigos(0,0,40);
+		Component labirinto = new Sala(new Abismo(), new Sala(new Sala(new Abismo(), new Sala(new Abismo(), new Saida(),"Sala3", i3),"Sala4", i4), new Saida(),"Sala2", i2),"Sala1", i1);
 		Personagem p1 = new Personagem();
 		Personagem p2 = new Personagem();
 		Personagem p3 = new Personagem();
@@ -30,7 +70,7 @@ public class Main {
 		t1.start();
 		t2.start();
 		t3.start();
-		
+		*/
 		
 		/* TESTE PADRAO DECORATOR 
 		 * 

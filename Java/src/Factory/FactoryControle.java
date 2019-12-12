@@ -3,7 +3,7 @@ import Command.*;
 import Personagens.*;
 
 public class FactoryControle {
-	public Controle getinvoker(Personagem p) {
+	public static Controle getinvoker(Personagem p) {
 		Controle c = new Controle();
 		
 		c.setCommand(new MoverEsq(p),0);

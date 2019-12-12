@@ -49,7 +49,7 @@ public class Inimigos implements Observador {
 			escudo25.setSucessor(escudo10);
 			escudo10.setSucessor(null);
 			
-			escudo100.processaEscudo(this.dano, personagem); //Determinando qual personagem vai levar o dano.
+			//escudo100.processaEscudo(this.dano, personagem); //Determinando qual personagem vai levar o dano.
 			System.out.print("\nPersonagem pegou uma recompensa!\n");
 			personagem.pegarRecompensa((int)(Math.random()*10)); //gera recompensas aleatórias.
 			if(Math.random() < 0.5) {
