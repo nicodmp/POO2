@@ -1,4 +1,5 @@
 package Personagens;
+import TiposMagia.*;
 
 import java.util.ArrayList;
 
@@ -14,6 +15,7 @@ public class Personagem implements Sujeito{
 	private Ataque a;
 	private Movimento c;
 	private Pulo p;
+	private Magia m;
 	private Estado estado;
 	private int vida;
 	private int x;
@@ -66,6 +68,14 @@ public class Personagem implements Sujeito{
 		this.p = p;
 	}
 	
+	public Magia getM() {
+		return m;
+	}
+
+	public void setM(Magia m) {
+		this.m = m;
+	}
+
 	public void atacar() {
 		a.atacar();
 	}
@@ -76,6 +86,10 @@ public class Personagem implements Sujeito{
 	
 	public void pular() {
 		p.pular();
+	}
+	
+	public void castar() {
+		m.castar();
 	}
 	
 	public void setVida(int vida) {
